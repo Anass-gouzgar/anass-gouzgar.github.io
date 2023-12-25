@@ -394,6 +394,10 @@ header.sticky {
   line-height: 1.4;
 }
 
+.row h5 a:visited {
+  color: var(--main-color); /* Set the main color for visited links */
+}
+
 .row:hover {
   border: 1px solid var(--main-color);
   transform: translateY(-5px) scale(1.03);
