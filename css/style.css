@@ -344,10 +344,18 @@ header.sticky {
   margin-bottom: 0.5rem;
 }
 
+/* color changed */
 .row h5 {
   font-size: 20px;
   font-weight: 600px;
-  color: var(--other-color);
+  color: var(--main-color);
+}
+
+/* certification card */
+.row h5 {
+  font-size: 20px;
+  font-weight: 600px;
+  color: var(--main-color);
 }
 
 .row i {
@@ -365,6 +373,23 @@ header.sticky {
 .row h4 {
   font-size: 25px;
   font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* certification card */
+.row h5 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+/* the 'see certificate' url */
+.row h5 a {
+  text-decoration: none; 
+  color: var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
   margin-bottom: 10px;
   line-height: 1.4;
 }
