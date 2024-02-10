@@ -684,6 +684,12 @@ span a {
   .main-content {
     width: 100%;
   }
+  .contact-form .send-btn {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 }
 
 @media (max-width: 470px) {
@@ -700,4 +706,11 @@ span a {
     object-fit: cover;
     margin: 0 auto;
   }
+.contact-form .send-btn {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 }
