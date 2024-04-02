@@ -377,32 +377,84 @@ I specialize in developing personalized portfolio websites showcasing skills and
 
     <!-- Contact -->
 
-    <section class="contact" id="contact">
-      <div class="center-text" data-aos="fade-down">
-        <h2>Contact <span>Me</span></h2>
-      </div>
+<!-- Contact -->
+<section class="contact" id="contact">
+ <div class="center-text" data-aos="fade-down">
+    <h2>Contact <span>Me</span></h2>
+ </div>
 
-      <div class="contact-form" data-aos="zoom-in">
-        <form action="mailto:anassgouzgar@gmail.com">
-          <input type="text" placeholder="Your Full Name" required />
-          <input
-            type="email"
-            name=""
-            id=""
-            placeholder="Email Address"
-            required
-          />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Message "
-          ></textarea>
-          <input type="submit" value="Send Message" class="send-btn" />
-        </form>
-      </div>
-    </section>
+ <div class="contact-form" data-aos="zoom-in">
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required
+      />
+      <textarea
+        name="message"
+        cols="30"
+        rows="10"
+        placeholder="Message "
+      ></textarea>
+      <input type="submit" value="Send Message" class="send-btn" />    
+      <div id="message" style="display: none;">
+      <p>Thank you for your message! I'll get back to you soon.</p>
+    </div>
+    </form>
+
+ </div>
+</section>
+
+<script>
+ document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    const formData = new FormData(event.target);  
+// https://formspree.io/
+    const formUrl = 'https://formspree.io/f/mwkgrydp';
+
+    fetch(formUrl, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      document.getElementById('message').style.display = 'block'; // Show the message on successful submission
+            event.target.reset(); // Clear the form fields
+
+    })
+    .catch(error => {
+      console.error('There has been a problem with your fetch operation:', error);
+    });
+ });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Footer -->
     <div class="footer">
       <div class="copyright">
